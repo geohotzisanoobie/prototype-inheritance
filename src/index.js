@@ -5,7 +5,7 @@ import { Order } from "./order.js";
 
 const hambLargeWithPotato = new Hamburger("large", "potato");
 const cola = new Drink("cola");
-const salad = new Salad("cesar");
+const salad = new Salad("cesar", 200);
 
 const order = new Order([cola, salad, hambLargeWithPotato]);
 console.log({ order });
@@ -13,7 +13,7 @@ console.log("calories", order.calculateOrderCalories());
 console.log("price", order.calculateOrderPrice());
 order.deletePosition("cola");
 console.log("order list", order.getOrderList());
-order.addPosition(new Salad("olivier"));
+order.addPosition(new Salad("olivier", 50));
 console.log("order list", order.getOrderList());
 order.serve();
 order.addPosition(cola);
